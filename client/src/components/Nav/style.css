@@ -1,0 +1,7 @@
+nav {
+    background-color:rgb(241, 165, 165)
+}
+
+nav, ul, li, a {
+    float: right;
+}
