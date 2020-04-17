@@ -15,7 +15,7 @@ function CovidTable (props) {
                 </thead>
                 <tbody>
                         <tr>
-                            <td>state</td>
+                            <td>State</td>
                             <td>Total Cases</td>
                             <td>Deaths</td>
                             <td>Total Tests Conducted</td>

@@ -1,6 +1,5 @@
 const axios = require('axios');
 const router = require('express').Router();
-const myAPI = 'dvUjz1rumQzMr9KIcUWGfkgRJsjSAi8y'
 const URL = 'https://api.nytimes.com/svc/archive/v1/2019/1.json?api-key=' + myAPI;
 
 router.route('/allnews').get(function (req, resp) {
@@ -24,4 +23,3 @@ router.route('/allnews').get(function (req, resp) {
 
 
 module.exports = router;
-//https://api.nytimes.com/svc/archive/v1/2019/1.json?api-key=dvUjz1rumQzMr9KIcUWGfkgRJsjSAi8y
