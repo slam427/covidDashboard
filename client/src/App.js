@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from '../src/components/Nav';
+import Footer from '../src/components/Footer';
 import MainPage from '../src/pages/MainPage';
 import UserPage from '../src/pages/UserPage';
 import SignUpPage from '../src/pages/SignUpPage';
@@ -26,6 +27,7 @@ function App() {
             <SignUpPage />
           </Route>
         </Switch>
+        <Footer />
   </div>
 </Router>
 

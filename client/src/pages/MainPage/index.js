@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
+import Sidebar from '../../components/Sidebar';
 // import API from '../utils/API';
 
 function MainPage () {
     return(
         <div>
-            HEEEEEELLLLOOOO
+            <Sidebar/>
         </div>
     )
 }

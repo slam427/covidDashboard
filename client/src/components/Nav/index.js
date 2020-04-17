@@ -5,9 +5,9 @@ import './style.css';
 function Nav() {
     return (
         <nav>
-            <div class="nav-wrapper">
-                <a href="/home" class="brand-logo">Covid-19 Dashboard</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <div className="nav-wrapper">
+                <a href="/home" className="brand-logo">Covid-19 Dashboard</a>
+                <ul id="nav-mobile" className="right hide-on-med-and-down">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/mypage">MyPage</Link></li>
                     <li><Link to="/signup">Sign Up</Link></li>
