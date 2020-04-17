@@ -3,8 +3,9 @@ import axios from 'axios';
 // nytimesapi - dvUjz1rumQzMr9KIcUWGfkgRJsjSAi8y
 
 export default {
-    nyTimesSearch: function () {
-        axios.get("/")
+    getAllNews: function () {
+        return axios.get("/api/nytimes/allnews")
     },
 
 }
+

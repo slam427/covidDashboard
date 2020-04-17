@@ -4,3 +4,5 @@ const covidTrackerRoutes = require ('./covidTracker.js')
 
 router.use('/nytimes', nytimesRoutes);
 router.use('/covidtracker', covidTrackerRoutes);
+
+module.exports = router;

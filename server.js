@@ -16,20 +16,20 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
-app.get('/api/allbooks', function (req, res) {
-    db.Book.find({}).then((allBooks)=> {
-        res.json(allBooks);
+app.get('/api/allnews', function (req, res) {
+    db.Book.find({}).then((allNews)=> {
+        res.json(allNews);
     })
 })
-app.post('/api/savebook', function (req, res) {
-    console.log("SAAAAAVVVVVEEEEE",req.body);
-    db.Book.create(req.body).then(bookData => {
-        res.json(bookData);
+app.post('/api/savearticle', function (req, res) {
+    console.log("SAAAAAVVVVVEEEEED",req.body);
+    db.Article.create(req.body).then(newsData => {
+        res.json(newsData);
     });
 })
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googleBooks");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/coviddb");
 
 // Start the API server
 app.listen(PORT, function () {
