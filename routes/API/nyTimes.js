@@ -1,6 +1,8 @@
 const axios = require('axios');
 const router = require('express').Router();
-const URL = 'https://api.nytimes.com/svc/archive/v1/2019/1.json?api-key=' + myAPI;
+const nytAPI = process.env
+const URL = 'https://api.nytimes.com/svc/archive/v1/2019/1.json?api-key=' + nytAPI;
+
 
 router.route('/allnews').get(function (req, resp) {
         axios.get(URL).then(res => {

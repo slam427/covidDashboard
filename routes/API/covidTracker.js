@@ -9,9 +9,9 @@ const stateWebsiteImage = 'screenshots';
 
 router.route('/').get(function (req, res) {
     console.log('myRequest',req);
-    axios.get(URL, req.params).then(covidData => {
-        console.log(covidData);
-        res.json(covidData);
+    axios.get(URL).then(stateData => {
+        console.log(res);
+        res.json(stateData);
     });
 })
 
