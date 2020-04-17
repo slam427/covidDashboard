@@ -1,7 +1,16 @@
-nav {
-    background-color:rgb(133, 210, 216)
+.nav-wrapper {
+    background-color:rgb(133, 210, 216);
 }
 
-nav, ul, li, a {
-    float: right;
+ul {
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+}
+
+a {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bolder;
+    
 }

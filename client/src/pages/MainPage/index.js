@@ -1,12 +1,17 @@
 import React from 'react';
-import Sidebar from '../../components/Sidebar';
+// import Map from '../../components/Map';
+import AllNews from '../../components/AllNews';
+
 // import API from '../utils/API';
 
 function MainPage () {
+
     return(
-        <div>
-            <Sidebar/>
+        <main>
+        <div className='allNews'>
+            <AllNews />
         </div>
+        </main>
     )
 }
 

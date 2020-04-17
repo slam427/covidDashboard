@@ -4,6 +4,7 @@ import './style.css';
 
 function Nav() {
     return (
+        <header>
         <nav>
             <div className="nav-wrapper">
                 <a href="/home" className="brand-logo">Covid-19 Dashboard</a>
@@ -15,6 +16,7 @@ function Nav() {
                 </ul>
             </div>
         </nav>
+        </header>
     )
 }
 

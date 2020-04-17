@@ -1,13 +1,12 @@
 import React from 'react';
-import './style.css';
 
-function Map() {
+function Headlines () {
     return (
         <div>
             
         </div>
     )
+}
 
-    }
 
-    export default Map;
+export default Headlines;
