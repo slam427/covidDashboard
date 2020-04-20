@@ -7,7 +7,7 @@ function AllNews (props) {
     return(
         <div>
             {props.newArticles.map((eachArticle) => {
-            return <NewsArticle article={eachArticle}/>
+            return <NewsArticle key={eachArticle.articleID} article={eachArticle}/>
             })}
         </div>
     )

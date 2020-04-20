@@ -1,13 +1,11 @@
 import React from 'react';
 import './style.css';
-import axios from 'axios'
+
 
 
 function NewsArticle(props) {
     
     return (
-        // <div className="card small card-panel black-text">
-        // <div className="card-content white-text">
         <div className="row">
             <div className="col s12 m6">
                 <div className="card card-panel white">
@@ -24,6 +22,6 @@ function NewsArticle(props) {
         </div>
     )
 }
-// onClick={handleClick}
+
 
 export default NewsArticle;

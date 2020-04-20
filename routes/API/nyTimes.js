@@ -1,7 +1,12 @@
 const axios = require('axios');
 const router = require('express').Router();
-const nytAPI = process.env
-const URL = 'https://api.nytimes.com/svc/archive/v1/2019/1.json?api-key=' + nytAPI;
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+//tried to use process.env but did not work for api key
+const nytAPI = process.env.NYT_API;
+const URL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date=20200401&end_date=20200419&facet_fields=section_name&fq=U.S.&q=covid-19%2C%20covid19%2C%20coronavirus&sort=newest&api-key=' + nytAPI;
 
 
 router.route('/allnews').get(function (req, resp) {
@@ -20,6 +25,7 @@ router.route('/allnews').get(function (req, resp) {
                 return article;
             })
             resp.json(info);
+            resp.end;
         })
 })
 

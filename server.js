@@ -6,6 +6,13 @@ const PORT = process.env.PORT || 3001;
 
 // const db = require('./models');
 
+// Connect to the Mongo DB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/coviddb",()=>{console.log('CONNECTED TO DATA BASE')});
+
+
+
+
+
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -16,20 +23,10 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
-app.get('/api/allnews', function (req, res) {
-    db.Book.find({}).then((allNews)=> {
-        res.json(allNews);
-    })
-})
-app.post('/api/savearticle', function (req, res) {
-    console.log("SAAAAAVVVVVEEEEED",req.body);
-    db.Article.create(req.body).then(newsData => {
-        res.json(newsData);
-    });
-})
-
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/coviddb");
+/*
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/coviddb",()=>{console.log('CONNECTED TO DATA BASE')});
+*/
 
 // Start the API server
 app.listen(PORT, function () {

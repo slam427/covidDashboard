@@ -5,5 +5,7 @@ export default {
         return axios.get("/api/nytimes/allnews")
     },
 
+    getStateData: function () {
+        return axios.get ("/api/covidtracker/statedata")
+    }
 }
-

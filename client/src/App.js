@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import Nav from '../src/components/Nav';
 import Footer from '../src/components/Footer';
 import MainPage from '../src/pages/MainPage';
