@@ -1,0 +1,19 @@
+.covidHead {
+display: flex;
+flex-flow: row;
+
+/* display: table-column-group; */
+}
+
+.covidBody {
+    display:table-row;
+}
+
+iframe {
+    display: flex;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+}

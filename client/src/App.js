@@ -4,6 +4,7 @@ import Footer from '../src/components/Footer';
 import MainPage from '../src/pages/MainPage';
 import UserPage from '../src/pages/UserPage';
 import SignUpPage from '../src/pages/SignUpPage';
+import MyPage from '../src/pages/MyPage';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route path="/">
             <MainPage />
+          </Route>
+          <Route path= "/mypage">
+            <MyPage />
           </Route>
         </Switch>
         <Footer />

@@ -1,57 +1,57 @@
-import React,{Component} from 'react';
-const axios = require ('axios');
-const URL = 'https://covidtracking.com/api/v1/states/current.json';
+import React, { Component } from 'react';
+import './style.css';
+const axios = require('axios');
 
 class CovidTable extends Component {
+    state = {
+        data: []
+    }
+
 
     componentDidMount() {
-        
-        axios.get(URL).then((res) => {
-            console.log(res.data)
-            this.setState({
-                isLoaded:true,
-                items:res.data
-            });
-            res.data.filter(()=> {
-            return res.data
-            })
-            .map((stateInfo) => {
-                const stateTable = {
-                    state: stateInfo.state,
-                    totalCases: stateInfo.total,
-                    deaths: stateInfo.death,
-                    totalTests: stateInfo.totalTestResults
-                }
-                console.log(stateTable)
-            })
-            })
+        axios.get('https://covidtracking.com/api/v1/states/current.json')
+    
+        .then(res => this.setState({
+            data: res.data
+        }))
+        .catch(err => console.log("the err", err))
     }
+    
+render() {
 
-    render() {
-
-        return (
-            <div>
-                <table>
-                <thead>
+    return (
+        <div>
+            <table>
+                <thead className="covidHead">
                     <tr>
-                        <th>State</th>
-                        <th>Total Cases<button onClick={()=>this.sortByTotalCases(true)}>Sort</button></th>
-                        <th>Deaths<button onClick={()=>this.sortByDeaths(false)}>Sort</button></th>
-                        <th>Total Tests Conducted</th>
+                        <th scope="col">State</th>
+                        <th scope="col">Total Cases<button onClick={() => this.sortByTotalCases(true)}>Sort</button></th>
+                        <th scope="col">Deaths<button onClick={() => this.sortByDeaths(false)}>Sort</button></th>
+                        <th scope="col">Total Tests Conducted</th>
                     </tr>
                 </thead>
-                <tbody>
-                        <tr>
-                            <td>{}</td>
-                            <td>{}</td>
-                            <td>{}</td>
-                            <td>{}</td>
+                <tbody className="covidBody">
+                    {this.state.data.map(item => (              
+                        <tr key={item.id}>
+                            <td>{item.id}</td>
+                            <td>{item.state}</td>
+                            <td>{item.total}</td>
+                            <td>{item.death}</td>
+                            <td>{item.totalTestResults}</td>
                         </tr>
+    
+
+
+                        
+                    ))
+                
+                    }
+
                 </tbody>
             </table>
-            </div>
-        )
-    }
+        </div>
+    )
+}
 }
 
 

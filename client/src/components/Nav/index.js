@@ -12,7 +12,6 @@ function Nav() {
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/mypage">MyPage</Link></li>
                     <li><Link to="/signup">Sign Up</Link></li>
-
                 </ul>
             </div>
         </nav>
